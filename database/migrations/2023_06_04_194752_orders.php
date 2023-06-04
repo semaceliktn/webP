@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('orderıtem',function (Blueprint $table){
+        Schema::table('orders',function (Blueprint $table){
             $table->id('order_id');
-            $table->unsignedBigInteger('book_id')->nullable();
-            $table->integer('quantity')->nullable();
-            $table->double('price')->nullable();
-            $table->foreign('order_id')->references('order_id')->on('orders');
+            $table->unsignedBigInteger('customer_id')->nullable();
+            $table->date('order_date')->nullable();
+            $table->double('sub_total')->nullable();
+            $table->foreign('customer_id')->references('customer_id')->on('customers');
             $table->timestamps();
         });
     }
