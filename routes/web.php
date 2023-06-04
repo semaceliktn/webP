@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/', function () {
     return view('anasayfa');
 });
+
+Route::get('/contact',function (){
+    return view('contact');
+});
