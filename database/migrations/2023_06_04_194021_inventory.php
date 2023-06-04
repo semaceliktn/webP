@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id('book_id');
             $table->integer('stock_level_used')->nullable();
             $table->integer('stock_level_new')->nullable();
+            $table->foreign('book_id')->references('book_id')->on('books');
             $table->timestamps();
         });
     }

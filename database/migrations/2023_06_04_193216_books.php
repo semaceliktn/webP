@@ -20,10 +20,6 @@ return new class extends Migration
             $table->string('genre')->nullable();
             $table->date('publication_year')->nullable();
             $table->double('price')->nullable();
-
-            $table->foreign('book_id')->references('book_id')->on('inventory');
-            $table->foreign('book_id')->references('book_id')->on('authors');
-            $table->foreign('book_id')->references('book_id')->on('publishers');
             $table->timestamps();
         });
     }

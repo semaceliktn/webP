@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id('publisher_id');
             $table->string('country')->nullable();
             $table->unsignedBigInteger('book_id')->nullable();
+            $table->foreign('book_id')->references('book_id')->on('books');
             $table->timestamps();
         });
     }
