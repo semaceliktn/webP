@@ -17,6 +17,7 @@ return new class extends Migration
             $table->integer('quantity')->nullable();
             $table->double('price')->nullable();
             $table->foreign('order_id')->references('order_id')->on('orders');
+            $table->foreign('book_id')->references('book_id')->on('orderitem');
             $table->timestamps();
         });
     }
