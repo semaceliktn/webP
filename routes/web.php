@@ -18,9 +18,14 @@ Route::get('/', function () {
 });
 
 Route::get('/', function () {
-    return view('anasayfa');
+    return view('index');
 });
-
+Route::get('/shop',function (){
+    return view('shop');
+});
+Route::get('/api',function (){
+    return view('api');
+});
 Route::get('/contact',function (){
     return view('contact');
 });
