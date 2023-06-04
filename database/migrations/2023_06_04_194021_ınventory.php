@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('ınventory',function (Blueprint $table){
+        Schema::create('ınventory',function (Blueprint $table){
             $table->id('book_id');
             $table->integer('stock_level_used')->nullable();
             $table->integer('stock_level_new')->nullable();

@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('publishers',function (Blueprint $table){
+        Schema::create('publishers',function (Blueprint $table){
             $table->id('publisher_id');
             $table->string('country')->nullable();
             $table->unsignedBigInteger('book_id')->nullable();
